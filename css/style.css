@@ -2,8 +2,6 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    min-width: 100%;
-    min-height: 100%;
 }
 
 .content {
@@ -11,8 +9,33 @@
     bottom: 50px;
     font-family: 'Heebo', sans-serif;
     font-style: italic;
-    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+}
+
+.content h1 {
+    font-size: 5em;
+}
+
+@media only screen and (max-width: 800px) {
+    .content h1 {
+        font-size: 3em;
+    }
+
+    #myVideo {
+        right: -25%;
+        width: 150%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    #myVideo {
+        right: -25%;
+        width: 150%;
+    }
 }
