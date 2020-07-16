@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Get Adobe Any Software Free - Raw Tech - #ThinkRAW</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172856778-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172856778-1');
+
+    </script>
+
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+</head>
+
+<body>
+    <header class="center">
+        <h1>Get Adobe Any Software Free</h1>
+    </header>
+    <main>
+        <div class="container center">
+            <div class="row">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/i5dGxl5bhS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <h5>For Download a File</h5>
+                <button class="btn" onclick="authenticate().then(loadClient)">Subscribe To RawTech</button>
+
+            </div>
+            <div id="verifyDiv" class="row" style="display: none;">
+                <h5>Verify your Subscription</h5>
+                <button class="btn" onclick="execute()">Verify</button>
+            </div>
+            <div id="lastDiv" class="row" style="display: none;">
+                <h5>Download:</h5>
+                <div class="row">
+                    <button class="btn" onclick="download(2018)">Download File for CC 2018-Below</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="download(2020)">Download File for CC 2019-2020</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        function authenticate() {
+            return gapi.auth2.getAuthInstance()
+                .signIn({
+                    scope: "https://www.googleapis.com/auth/youtube.readonly"
+                })
+                .then(function() {
+                        console.log("Sign-in successful");
+                    },
+                    function(err) {
+                        console.error("Error signing in", err);
+                    });
+        }
+
+        function loadClient() {
+            gapi.client.setApiKey("AIzaSyC1JoMaM9fPm6sq4zjgBosre4WlnYudN0I");
+            return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+                .then(function() {
+                        console.log("GAPI client loaded for API");
+                        execute();
+                    },
+                    function(err) {
+                        console.error("Error loading GAPI client for API", err);
+                    });
+        }
+        // Make sure the client is loaded and sign-in is complete before calling this method.
+        function execute() {
+            return gapi.client.youtube.subscriptions.list({
+                    "part": [
+                        "snippet,contentDetails"
+                    ],
+                    "forChannelId": "UCnQYzyhi9HQSbe7XJGiWEiQ",
+                    "mine": true
+                })
+                .then(function(response) {
+                        // Handle the results here (response.result has the parsed body).
+                        console.log("Response", response);
+                        if (response.result.items.length !== 0) {
+                            $("#lastDiv").fadeIn();
+                        } else {
+                            window.open("https://www.youtube.com/channel/UCnQYzyhi9HQSbe7XJGiWEiQ");
+                            $("#verifyDiv").fadeIn();
+                        }
+                    },
+                    function(err) {
+                        console.error("Execute error", err);
+                    });
+        }
+
+        function download(year) {
+            switch (year) {
+                case 2018:
+                    window.open("https://www11.zippyshare.com/v/qPtom1Zk/file.html");
+                    break;
+                case 2020:
+                    window.open("https://www11.zippyshare.com/v/mEOeVZEV/file.html");
+                    break;
+            }
+        }
+
+        gapi.load("client:auth2", function() {
+            gapi.auth2.init({
+                client_id: "85219816395-5ufkuepobiiof8cgiok9jo0beluju403.apps.googleusercontent.com"
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
