@@ -33,25 +33,35 @@
     <main>
         <div class="container center">
             <div class="row">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/i5dGxl5bhS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+                <div class="row">
+                    <h5>For Download a File</h5>
+                    <h6 class="red-text">* We are not storing your information
+                        Login credentials just needed to verify subscription</h6>
+                    <button class="btn" onclick="authenticate().then(loadClient)">Subscribe To RawTech</button>
+
+                </div>
+                <div id="verifyDiv" class="row" style="display: none;">
+                    <h5>Verify your Subscription</h5>
+                    <button class="btn" onclick="execute()">Verify</button>
+                </div>
+                <div id="lastDiv" class="row" style="display: none;">
+                    <h5>Download:</h5>
+                    <div class="row">
+                        <button class="btn" onclick="download(2018)">Download File for CC 2018-Below</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn" onclick="download(2020)">Download File for CC 2019-2020</button>
+                    </div>
+                </div>
             </div>
             <div class="row">
-                <h5>For Download a File</h5>
-                <button class="btn" onclick="authenticate().then(loadClient)">Subscribe To RawTech</button>
-
+                <h4>How To Get Adobe Creative Cloud For Free in Hindi</h4>
+                <h6>Watch Videos For Details</h6>
+                <br>
+                <iframe src="https://www.youtube.com/embed/i5dGxl5bhS0" style="max-width:560px; min-width:290px;width: 100%; height: 315px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
             </div>
-            <div id="verifyDiv" class="row" style="display: none;">
-                <h5>Verify your Subscription</h5>
-                <button class="btn" onclick="execute()">Verify</button>
-            </div>
-            <div id="lastDiv" class="row" style="display: none;">
-                <h5>Download:</h5>
-                <div class="row">
-                    <button class="btn" onclick="download(2018)">Download File for CC 2018-Below</button>
-                </div>
-                <div class="row">
-                    <button class="btn" onclick="download(2020)">Download File for CC 2019-2020</button>
-                </div>
+            <div class="row">
+                <iframe src="//instagram.com/p/CCyp26Gl9w9/embed/" style="max-width:560px; min-width:290px;width: 100%; height: 1000px;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
             </div>
         </div>
     </main>
