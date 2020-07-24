@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raw Tech - #ThinkRAW</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172856778-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172856778-1');
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="" role="navigation" style="background-color: #FFF400">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="../index.html" class="brand-logo"><img height="70" src="../images/logo.png" /></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                <li><a href="../files.html">Files</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                <li><a href="../files.html">Files</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <main>
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <h1 id="title" class="header center white-text">Title</h1>
+                </div>
+            </div>
+            <div class="parallax"><img id="poster" src="../images/unavailable.png" alt="Unsplashed background img 1" style="filter: blur(8px);"></div>
+        </div>
+        <div class="container">
+            <div class="section white-text">
+                <div class="row center">
+                    <h3 class="header center white-text">Watch Video For How To Installation Tutorial</h3>
+                </div>
+                <div id="videoBtn" class="row center">
+                </div>
+            </div>
+            <div class="section white-text">
+                <div class="row center">
+                    <h5 class="header center white-text">Subscribe To RawTech For Download a File</h5>
+                </div>
+                <div class="row center">
+                    <a class="waves-effect waves-light btn" href="https://www.youtube.com/c/rawtechteam?sub_confirmation=1" target="_blank">Click Here For Visit Youtube Channel</a>
+                </div>
+            </div>
+            <div class="section white-text" style="display: none;">
+                <div class="row center">
+                    <h5 class="header center white-text">Verify your Subscription to RawTech</h5>
+                    <h6 class="red-text">Note:- We are not storing your information.Login credentials just needed to verify subscription.</h6>
+                </div>
+                <div class="row center">
+                    <a class="waves-effect waves-light btn" onclick="authenticate()">Verify your Subscription</a>
+                    <h6 id="alert" class="red-text" style="display: none;">Try Again</h6>
+                </div>
+            </div>
+            <div class="section white-text">
+                <div class="row center">
+                    <h5 class="header center white-text">Download Links</h5>
+                </div>
+                <div class="row center">
+                    <a id="downloadFile" class="waves-effect waves-light btn" target="_blank">Download File</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer" style="background-color: #FFF400">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="black-text">About Us</h5>
+                    <p class="grey-text text-darken-3">Tech Videos that count! Join Us :)</p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="black-text">Navigation</h5>
+                    <ul>
+                        <li><a class="grey-text text-darken-3" href="../index.html">Home</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                        <li><a class="grey-text text-darken-3" href="../files.html">Files</a></li>
+                        <li><a class="grey-text text-darken-3" href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="black-text">Connect</h5>
+                    <ul>
+                        <li><a class="grey-text text-darken-3" href="https://www.youtube.com/c/rawtechteam">YouTube</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.instagram.com/rawtechteam/">Instagram</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://twitter.com/rawtechteam">Twitter</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.facebook.com/rawtechteam">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container brown-text text-darken-3">
+                Copyright <a class="black-text" href="http://rawtechteam.github.io/">RawTech</a> © 2020. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="../js/materialize.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="getDetails.js"></script>
+
+</body>
+
+</html>

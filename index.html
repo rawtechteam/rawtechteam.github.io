@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Raw Tech - #ThinkRAW</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172856778-1"></script>
     <script>
@@ -20,125 +24,188 @@
 
     </script>
 
-
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
 </head>
 
 <body>
+    <nav class="" role="navigation" style="background-color: #FFF400">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo"><img height="70" src="images/logo.png" /></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                <li><a href="files.html">Files</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
 
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                <li><a href="files.html">Files</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
 
-    <div class="size1 bg0 where1-parent">
-        <!-- Coutdown -->
-        <div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('images/logo.png');">
-            <div class="wsize2 flex-w flex-c-m cd100 js-tilt">
-                <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-                    <span class="l2-txt1 p-b-9 days">35</span>
-                    <span class="s2-txt4">Days</span>
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center white-text">#ThinkRaw</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">Review | Tutorial | Tips</h5>
                 </div>
-
-                <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-                    <span class="l2-txt1 p-b-9 hours">17</span>
-                    <span class="s2-txt4">Hours</span>
+                <div class="row center">
+                    <a href="#section1" id="download-button" class="btn-large waves-effect waves-light yellow lighten-1 black-text">Start Raw</a>
                 </div>
+                <br><br>
 
-                <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-                    <span class="l2-txt1 p-b-9 minutes">50</span>
-                    <span class="s2-txt4">Minutes</span>
-                </div>
-
-                <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-                    <span class="l2-txt1 p-b-9 seconds">39</span>
-                    <span class="s2-txt4">Seconds</span>
-                </div>
             </div>
         </div>
-
-        <!-- Form -->
-        <div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
-            <div class="wrap-pic1">
-                <img src="images/icons/logo.png" alt="LOGO">
-            </div>
-
-            <div class="p-t-50 p-b-60">
-                <p class="m1-txt1 p-b-36">
-                    Our website is <span class="m1-txt2">Coming Soon</span>, follow us for update now!
-                </p>
+        <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
+    </div>
 
 
+    <div class="container">
+        <div id="section1" class="section">
 
-            </div>
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center" style="color: #FFF400"><i class="material-icons">rate_review</i></h2>
+                        <h5 class="center white-text">Review</h5>
 
-            <div class="flex-w">
-                <a href="https://www.facebook.com/rawtechteam" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
-                    <i class="fa fa-facebook"></i>
-                </a>
+<!--                        <p class="light white-text">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>-->
+                    </div>
+                </div>
 
-                <a href="https://twitter.com/rawtechteam" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
-                    <i class="fa fa-twitter"></i>
-                </a>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center" style="color: #FFF400"><i class="material-icons">book</i></h2>
+                        <h5 class="center white-text">Tutorial</h5>
 
-                <a href="https://www.youtube.com/c/rawtechteam" class="flex-c-m size5 bg5 how1 trans-04 m-r-5">
-                    <i class="fa fa-youtube-play"></i>
-                </a>
+<!--                        <p class="light white-text">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>-->
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center" style="color: #FFF400"><i class="material-icons">lightbulb_outline</i></h2>
+                        <h5 class="center white-text">Tips</h5>
+
+<!--                        <p class="light white-text">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
+    <div class="parallax-container valign-wrapper">
+        <div class="container">
+            <div class="row">
+                <h2 class="header col s12 light">VIDEOS</h2>
+            </div>
+            <div class="row center">
+                <div class="col s12 m6 l4">
+                    <a id="video1" target="_blank"><img class="thumbnail" height="150" src="images/unavailable.png" /></a>
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <a id="video2" target="_blank"><img class="thumbnail" height="150" src="images/unavailable.png" /></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="https://www.youtube.com/c/rawtechteam/videos"><img height="150" class="thumbnail" src="images/thublast.png" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <h2 class="header col s12 light white-text">Files</h2>
+                    </div>
+                    <div class="row center">
+                        <div class="col s12 m4 l3">
+                            <a id="file1"><img class="thumbnail" height="150" src="images/unavailableSqare.png" /></a>
+                        </div>
+                        <div class="col m4 l3 hide-on-small-only">
+                            <a id="file2"><img class="thumbnail" height="150" src="images/unavailableSqare.png" /></a>
+                        </div>
+                        <div class="col l3 hide-on-med-and-down">
+                            <a id="file3"><img class="thumbnail" height="150" src="images/unavailableSqare.png" /></a>
+                        </div>
+                        <div class="col s12 m4 l3">
+                            <a href="files.html"><img height="150" class="thumbnail" src="images/showMoreSqare.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h3 class="header col s12 light">Subscribe to <a class="grey-text" href="https://www.youtube.com/c/rawtechteam">#RawTech</a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
+    </div>
 
-    <!--===============================================================================================-->
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/countdowntime/moment.min.js"></script>
-    <script src="vendor/countdowntime/moment-timezone.min.js"></script>
-    <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="vendor/countdowntime/countdowntime.js"></script>
-    <script>
-        $('.cd100').countdown100({
-            /*Set Endtime here*/
-            /*Endtime must be > current time*/
-            endtimeYear: 0,
-            endtimeMonth: 0,
-            endtimeDate: 35,
-            endtimeHours: 18,
-            endtimeMinutes: 0,
-            endtimeSeconds: 0,
-            timeZone: ""
-            // ex:  timeZone: "America/New_York"
-            //go to " http://momentjs.com/timezone/ " to get timezone
-        });
+    <footer class="page-footer" style="background-color: #FFF400">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="black-text">About Us</h5>
+                    <p class="grey-text text-darken-3">Tech Videos that count!
+                        Join Us :)</p>
 
-    </script>
-    <!--===============================================================================================-->
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
 
-    </script>
-    <!--===============================================================================================-->
-    <script src="js/main.js"></script>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="black-text">Navigation</h5>
+                    <ul>
+                        <li><a class="grey-text text-darken-3" href="index.html">Home</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.youtube.com/c/rawtechteam/videos">Videos</a></li>
+                        <li><a class="grey-text text-darken-3" href="files.html">Files</a></li>
+                        <li><a class="grey-text text-darken-3" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="black-text">Connect</h5>
+                    <ul>
+                        <li><a class="grey-text text-darken-3" href="https://www.youtube.com/c/rawtechteam?sub_confirmation=1">YouTube</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.instagram.com/rawtechteam/">Instagram</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://twitter.com/rawtechteam">Twitter</a></li>
+                        <li><a class="grey-text text-darken-3" href="https://www.facebook.com/rawtechteam">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container brown-text text-darken-3">
+                Copyright <a class="black-text" href="http://rawtechteam.github.io/">RawTech</a> © 2020. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
