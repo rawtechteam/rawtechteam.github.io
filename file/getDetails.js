@@ -3,6 +3,8 @@ $.ajax({
     success: function (data) {
         data.forEach(function (file) {
             if (file.id == getUrlVars()["id"]) {
+                var title = $("title").html()
+                $("title").html(file.title + ' - ' + title);
                 $("#title").html(file.title)
                 $("#downloadFile").attr("href", file.url);
                 $("#poster").attr("src", "img/" + file.img);
