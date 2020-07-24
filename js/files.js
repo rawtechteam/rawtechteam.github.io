@@ -6,7 +6,7 @@ if (getUrlVars()["list"] == undefined) {
 
 function getData(page) {
     $.ajax({
-        url: baseUrl+'1f1306c07615c0f06726',
+        url: baseUrl + '1f1306c07615c0f06726',
         dataType: "json",
         success: function (data) {
             var perPage = 25;
@@ -38,11 +38,13 @@ function getData(page) {
             }
             for (var i = 0; i < data.length; i++) {
                 if (i >= (page * perPage) - perPage && i < page * perPage) {
-                    var title = data[i].title;
-                    var id = data[i].id;
-                    var logo = data[i].img;
-                    var html = createPost(title, logo, id);
-                    $(".post").append(html);
+                    if (data[i].data === true) {
+                        var title = data[i].title;
+                        var id = data[i].id;
+                        var logo = data[i].img;
+                        var html = createPost(title, logo, id);
+                        $(".post").append(html);
+                    }
                 }
             }
         },
