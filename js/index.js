@@ -45,6 +45,7 @@ $.ajax({
                 var html = data[i].html;
                 var title = data[i].title;
                 $("#product" + (i + 1)).append(html);
+                $("#product" + (i + 1)+" img").addClass("thumbnail");
                 $("#product" + (i + 1)).append('<h5 class="truncate">' + title + '</h5></div>');
             }
         }
