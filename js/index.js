@@ -34,3 +34,22 @@ $.ajax({
         console.log(status, error)
     }
 });
+
+$.ajax({
+    url: baseUrl + 'e60ff5fc7cb37ca68009',
+    dataType: "json",
+    success: function (data) {
+        for (var i = 0; i < 3; i++) {
+            if (data[i].active === true) {
+                var id = data[i].id;
+                var html = data[i].html;
+                var title = data[i].title;
+                $("#product" + (i + 1)).append(html);
+                $("#product" + (i + 1)).append('<h5 class="truncate">' + title + '</h5></div>');
+            }
+        }
+    },
+    error: function (xhr, status, error) {
+        console.log(status, error)
+    }
+});
