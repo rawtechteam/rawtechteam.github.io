@@ -24,9 +24,9 @@ $.ajax({
         for (var i = 0; i < 3; i++) {
             if (data[i].data === true) {
                 var id = data[i].id;
-                var img = data[i].img;
+                var img = data[i].logo;
                 $("#file" + (i + 1)).attr("href", "file?id=" + id);
-                $("#file" + (i + 1) + " img").attr("src", "logos/" + img);
+                $("#file" + (i + 1) + " img").attr("src", "" + img);
             }
         }
     },

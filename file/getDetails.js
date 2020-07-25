@@ -7,7 +7,7 @@ $.ajax({
                 $("title").html(file.title + ' - ' + title);
                 $("#title").html(file.title)
                 $("#downloadFile").attr("href", file.url);
-                $("#poster").attr("src", "img/" + file.img);
+                $("#poster").attr("src", "" + file.img);
                 file.videoLinks.forEach(function (link, index) {
                     $("#videoBtn").append('<div class="row"><a class="waves-effect waves-light btn" href="' + link + '" target="_blank">Part ' + (index + 1) + ' Video</a></div>');
                 })

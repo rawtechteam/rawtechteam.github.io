@@ -41,7 +41,7 @@ function getData(page) {
                     if (data[i].data === true) {
                         var title = data[i].title;
                         var id = data[i].id;
-                        var logo = data[i].img;
+                        var logo = data[i].logo;
                         var html = createPost(title, logo, id);
                         $(".post").append(html);
                     }
@@ -57,7 +57,7 @@ function getData(page) {
 function createPost(title, logo, id) {
     var html = ''
     html += '<div class="col s12 m4 l3"><a href="file?id=' + id + '"><div class="card"><div class="card-image">'
-    html += '<img src="logos/' + logo + '">'
+    html += '<img src="' + logo + '">'
     html += '</div><div class="card-stacked"><div class="card-content">'
     html += '<h5>' + title + '</h5>'
     html += '</div></div></div></a></div>';
