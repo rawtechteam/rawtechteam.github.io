@@ -1,7 +1,7 @@
 $.ajax({
     url: baseUrl + "0e975edf147221c770f0",
     success: function (data) {
-        var thumb = "thumbnail/"
+        var thumb = ""
         var href1 = data[0].url;
         var img1 = thumb + data[0].thumbnail;
         var href2 = data[1].url;
