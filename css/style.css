@@ -102,6 +102,11 @@ footer li {
     color: black;
 }
 
+.btn:hover,.btn:focus {
+    background-color: #b91212;
+    color: white;
+}
+
 .input-field input{
     color: #FFF400 !important;
 }
