@@ -42,7 +42,8 @@ function getData(page) {
                         var title = data[i].title;
                         var id = data[i].id;
                         var html = data[i].html;
-                        var test = createPost(title, html, id);
+                        var type = data[i].type;
+                        var test = createPost(title, html, id,type);
                         $(".products").append(test);
                     }
                 }
@@ -54,12 +55,13 @@ function getData(page) {
     });
 }
 
-function createPost(title, logo, id) {
+function createPost(title, logo, id,type) {
     var html = ''
     html += '<div class="col s12 m4 l3"><div class="card"><div class="card-image">';
     html += logo
     html += '</div><div class="card-stacked"><div class="card-content">'
     html += '<h5 class="truncate">' + title + '</h5>'
+    html += '<p class="truncate">' + type + '</p>'
     html += '</div></div></div></a></div>';
     return html;
 }
