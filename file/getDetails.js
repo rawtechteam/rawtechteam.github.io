@@ -15,3 +15,8 @@ $.ajax({
         })
     }
 });
+
+$("#ytBtn").click(function(){
+    console.log(true)
+    $("#downloadFile").attr('disabled', false);
+})
