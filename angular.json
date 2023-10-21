@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rawtechteam.github.io": {
+    "WeddingInvitation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rawtechteam.github.io",
+            "outputPath": "dist/wedding-invitation",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rawtechteam.github.io:build:production"
+              "browserTarget": "WeddingInvitation:build:production"
             },
             "development": {
-              "browserTarget": "rawtechteam.github.io:build:development"
+              "browserTarget": "WeddingInvitation:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rawtechteam.github.io:build"
+            "browserTarget": "WeddingInvitation:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "e7b308c7-a898-430d-a819-79d79f60c05b"
+    "analytics": "1e25c1a2-788d-40f4-a83e-345f30376896"
   }
 }

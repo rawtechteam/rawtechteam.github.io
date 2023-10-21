@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rawtechteam.github.io'`, () => {
+  it(`should have as title 'WeddingInvitation'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rawtechteam.github.io');
+    expect(app.title).toEqual('WeddingInvitation');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('rawtechteam.github.io app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('WeddingInvitation app is running!');
   });
 });
