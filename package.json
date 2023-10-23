@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href 'https://rawtechteam.github.io'",
+    "build": "ng build --base-href \"https://rawtechteam.github.io\"",
     "watch": "ng build --watch --configuration development",
     "deploy": "npx angular-cli-ghpages --dir=dist/wedding-invitation",
     "test": "ng test"
