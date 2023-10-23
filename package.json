@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href 'https://rawtechteam.github.io'",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng deploy --repo='https://github.com/rawtechteam/rawtechteam.github.io.git'",
+    "deploy": "npx angular-cli-ghpages --dir=dist/wedding-invitation",
     "test": "ng test"
   },
   "private": true,
