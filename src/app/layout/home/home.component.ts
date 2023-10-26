@@ -15,8 +15,6 @@ export class HomeComponent {
   ngOnInit() {
     this.title.setTitle('Suyog weds Payal')
     this.route.params.subscribe((val: any) => {
-      console.log(val);
-
       switch (val.val) {
         case 'bride':
           this.title.setTitle('Payal weds Suyog')
