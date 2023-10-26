@@ -111,8 +111,7 @@ body {
 
         &:nth-child(1) {
             background-image: url("./assets/page1.JPG");
-            // background-position: 45% 40%;
-            background-position: 40.5% 62%;
+            background-position: 40.5% 40%;
             background-size: 200vh;
 
             h2 {
@@ -195,6 +194,8 @@ body {
         }
 
         &:nth-child(1) {
+            background-position: 40.5% 62% !important;
+
             h2 {
                 font-size: 14vw !important;
             }
