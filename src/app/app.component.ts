@@ -20,6 +20,7 @@ export class AppComponent {
           this.title.setTitle('Payal weds Suyog')
           this.fname = 'Payal'
           this.sname = 'Suyog'
+          $('span.title small').css('margin-left', '3vw')
           break;
         case 'groom':
           this.title.setTitle('Suyog weds Payal')
