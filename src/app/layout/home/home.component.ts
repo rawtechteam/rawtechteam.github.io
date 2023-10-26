@@ -20,7 +20,7 @@ export class HomeComponent {
           this.title.setTitle('Payal weds Suyog')
           this.fname = 'Payal'
           this.sname = 'Suyog'
-          $('span.title small').css('margin-left', '3vw')
+          $('span.title small').css('margin-left', '4vw')
           break;
         case 'groom':
           this.title.setTitle('Suyog weds Payal')
