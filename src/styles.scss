@@ -75,7 +75,7 @@ body {
         scroll-snap-align: center;
 
         h2 {
-            color: #050505;
+            color: #b61414;
             width: 100%;
             font-family: sweety;
             text-align: right;
@@ -86,12 +86,13 @@ body {
                 animation: fade-in 0.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
             }
 
-            span {
+            span.title {
                 text-shadow: 2px 1px 5px #14141478;
-                color: #690101;
 
                 small {
-                    font-size: 3vw;
+                    font-size: 4vw;
+                    margin-right: 3vw;
+                    margin-left: 3vw;
                 }
             }
         }
@@ -169,10 +170,10 @@ body {
 @media only screen and (max-width: 600px) {
     section {
         h2 {
-            span {
+            span.title {
                 small {
                     font-size: 3vh !important;
-                    margin-right: 8px;
+                    margin-right: 4vw !important;
                 }
             }
         }
