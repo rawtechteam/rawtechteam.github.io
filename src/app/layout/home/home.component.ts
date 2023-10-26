@@ -14,37 +14,44 @@ export class HomeComponent {
   constructor(private title: Title, private meta: Meta, private route: ActivatedRoute) { }
   ngOnInit() {
     this.title.setTitle('Suyog weds Payal')
-    this.meta.updateTag({ name: 'og:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
     this.meta.updateTag({ name: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ name: 'og:image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
+
+    this.meta.updateTag({ itemprop: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ itemprop: 'image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
+
+    this.meta.updateTag({ property: 'og:type', content: 'website' })
+    this.meta.updateTag({ property: 'og:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ property: 'og:image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
+
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' })
+    this.meta.updateTag({ name: 'twitter:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ property: 'twitter:image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
 
     this.route.params.subscribe((val: any) => {
       switch (val.val) {
         case 'bride':
-          this.title.setTitle('Payal weds Suyog')
-          this.meta.updateTag({ name: 'og:title', content: 'Payal weds Suyog' })
-          this.meta.updateTag({ name: 'og:url', content: 'https://rawtechteam.github.io/bride' })
           this.fname = 'Payal'
           this.sname = 'Suyog'
           $('span.title small').css('margin-left', '4vw')
           break;
         case 'groom':
-          this.title.setTitle('Suyog weds Payal')
-          this.meta.updateTag({ name: 'og:title', content: 'Suyog weds Payal' })
-          this.meta.updateTag({ name: 'og:url', content: 'https://rawtechteam.github.io/groom' })
           this.fname = 'Suyog'
           this.sname = 'Payal'
           $('span.title small').css('margin-left', '2vw')
           break;
         default:
-          this.title.setTitle('Suyog weds Payal')
-          this.meta.updateTag({ name: 'og:title', content: 'Suyog weds Payal' })
-          this.meta.updateTag({ name: 'og:url', content: 'https://rawtechteam.github.io/' })
           this.fname = 'Suyog'
           this.sname = 'Payal'
           $('span.title small').css('margin-left', '2vw')
           break;
       }
+      this.title.setTitle(`${this.fname} weds ${this.sname}`)
+
+      this.meta.updateTag({ itemprop: 'name', content: `${this.fname} weds ${this.sname}` })
+      this.meta.updateTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
+      this.meta.updateTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
+
+      this.meta.updateTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
     })
     $('#home .tag').addClass('visible');
     $(".smooth").on("scroll", function () {
