@@ -97,7 +97,7 @@ body {
                 }
 
                 small {
-                    font-size: 10vh;
+                    font-size: 5vw;
                     margin-right: 3vw;
                     margin-left: 3vw;
                     margin-top: -2%;
@@ -117,7 +117,7 @@ body {
             h2 {
                 position: absolute;
                 font-family: king;
-                font-size: 20vh;
+                font-size: 10vw;
                 right: 1%;
                 top: 50px;
                 text-align: center;
@@ -197,64 +197,45 @@ body {
             background-position: 40.5% 62% !important;
 
             h2 {
-                font-size: 6vh !important;
+                font-size: 15vw !important;
             }
         }
     }
 }
 
-@media only screen and (min-width: 600px) {
-    section {
-        h2 {
-            span.title {
-                small {
-                    font-size: 6vh !important;
-                }
-            }
-        }
-
-        &:nth-child(1) {
-            h2 {
-                font-size: 10vh !important;
-            }
-        }
-    }
-}
+// @media only screen and (min-width: 600px) {}
 
 // @media only screen and (min-width: 768px) {}
 
 // @media only screen and (min-width: 992px) {}
 
-@media only screen and (min-width: 1200px) {
-    section {
-        h2 {
-            span.title {
-                small {
-                    font-size: 10vh !important;
-                }
-            }
-        }
+// @media only screen and (min-width: 1200px) {}
 
-        &:nth-child(1) {
-            h2 {
-                font-size: 20vh !important;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
     section {
 
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3) {
-            background-position: center !important;
             background-size: cover !important;
+            background-position: center !important;
         }
 
         &:nth-child(3) {
             background-position: 31% 25% !important;
+        }
+
+        &:nth-child(1) {
+            h2 {
+                font-size: 5vw !important;
+                top: 70px !important;
+
+                span.title {
+                    small {
+                        font-size: 3vw !important;
+                    }
+                }
+            }
         }
     }
 }
