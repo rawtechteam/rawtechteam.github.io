@@ -1,11 +1,13 @@
 <div class="smooth">
-    <section id="home">
+    <section id="home" [lazyLoad]="image1">
         <h2 class="tag">
-            <span class="title"><span class="fname">{{fname}}</span> <small>weds</small> <span
-                    class="sname">{{sname}}</span></span>
+            <span class="title">
+                <span class="fname">{{fname}}</span>
+                <small>weds</small>
+                <span class="sname">{{sname}}</span></span>
         </h2>
     </section>
-    <section id="about">
+    <section id="about" [lazyLoad]="image2">
         <h2 class="tag">
             <span>
                 Join us as we embark on this beautiful journey of love, laughter,<br>
@@ -14,14 +16,14 @@
             </span>
         </h2>
     </section>
-    <section id="dates">
+    <section id="dates" [lazyLoad]="image3">
         <h2 class="tag">
             <span>on 07-12-2023 <br>
                 at 12.35 pm
             </span>
         </h2>
     </section>
-    <section id="contact">
+    <section id="contact" [lazyLoad]="image4">
         <h2 class="tag">
             <span style="text-decoration: underline;">Venue</span><br>
             <span>
