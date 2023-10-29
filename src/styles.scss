@@ -1,5 +1,5 @@
 $colone: #312d3c;
-$coltwo: #1d1e22;
+$coltwo: #000000;
 $colthr: #f4f4f4;
 
 @font-face {
@@ -30,6 +30,49 @@ body {
     background-color: $coltwo;
 }
 
+
+
+.page-change {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+
+    &.page-up {
+        top: 10px
+    }
+
+    &.page-down {
+        bottom: 10px
+    }
+
+    .page-icon {
+        text-shadow: 2px 1px 5px rgb(43 43 43 / 47%);
+        border: 0;
+        outline: 0;
+        border-radius: 25px;
+        padding: 5px 15px 5px 15px;
+        font-size: 2em;
+        color: white;
+        background-color: #b61414;
+        display: inline-block;
+        line-height: 40px;
+    }
+}
+
+.box {
+    border: none;
+    border-radius: 25px;
+    height: 100%;
+    background-color: rgba($colthr, 0.8);
+}
+
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .scrolls {
     position: absolute;
     top: 50%;
@@ -48,20 +91,6 @@ body {
         font-size: 0.825rem;
     }
 }
-
-.box {
-    border: none;
-    border-radius: 25px;
-    height: 100%;
-    background-color: #F5F5F5cf;
-}
-
-.centered-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .smooth {
     position: relative;
@@ -96,23 +125,26 @@ body {
                 font-family: sweety;
                 text-align: center;
                 padding: 2px;
+                text-wrap: pretty;
 
-                span.title {
-                    text-shadow: 2px 1px 5px rgb(43 43 43 / 47%);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                span {
+                    &.title {
+                        text-shadow: 2px 1px 5px rgb(43 43 43 / 47%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
-                    span:nth-child(1) {
-                        margin-top: 0%;
-                    }
+                        span:nth-child(1) {
+                            margin-top: 0%;
+                        }
 
-                    span:nth-child(2) {
-                        margin-top: 10%;
-                    }
+                        span:nth-child(2) {
+                            margin-top: 10%;
+                        }
 
-                    span:nth-child(3) {
-                        margin-top: 20%;
+                        span:nth-child(3) {
+                            margin-top: 20%;
+                        }
                     }
                 }
             }
@@ -166,7 +198,6 @@ body {
         }
     }
 }
-
 
 @keyframes fade-in {
     100% {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 declare var $: any;
@@ -36,20 +36,14 @@ export class HomeComponent {
         case 'bride':
           this.fname = 'Payal'
           this.sname = 'Suyog'
-          // $('span.title small').css('margin-left', '4vw')
-          // $('span.title small').css('margin-right', '4vw')
           break;
         case 'groom':
           this.fname = 'Suyog'
           this.sname = 'Payal'
-          // $('span.title small').css('margin-left', '2vw')
-          // $('span.title small').css('margin-right', '2vw')
           break;
         default:
           this.fname = 'Suyog'
           this.sname = 'Payal'
-          // $('span.title small').css('margin-left', '2vw')
-          // $('span.title small').css('margin-right', '2vw')
           break;
       }
       this.title.setTitle(`${this.fname} weds ${this.sname}`)
@@ -76,5 +70,26 @@ export class HomeComponent {
       }
     });
     $('#home').find('.main').addClass("visible");
+  }
+
+  pageChange(val: any) {
+    switch (val) {
+      case 'up':
+        document?.querySelector('#dates')?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'down':
+        document?.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+        break;
+    }
+  }
+
+  dateCondition() {
+    const current = new Date();
+    const endDate = new Date('11/1/2023')
+    if (current >= endDate) {
+      return true
+    }
+    return false
+
   }
 }
