@@ -36,17 +36,20 @@ export class HomeComponent {
         case 'bride':
           this.fname = 'Payal'
           this.sname = 'Suyog'
-          $('span.title small').css('margin-left', '4vw')
+          // $('span.title small').css('margin-left', '4vw')
+          // $('span.title small').css('margin-right', '4vw')
           break;
         case 'groom':
           this.fname = 'Suyog'
           this.sname = 'Payal'
-          $('span.title small').css('margin-left', '2vw')
+          // $('span.title small').css('margin-left', '2vw')
+          // $('span.title small').css('margin-right', '2vw')
           break;
         default:
           this.fname = 'Suyog'
           this.sname = 'Payal'
-          $('span.title small').css('margin-left', '2vw')
+          // $('span.title small').css('margin-left', '2vw')
+          // $('span.title small').css('margin-right', '2vw')
           break;
       }
       this.title.setTitle(`${this.fname} weds ${this.sname}`)
@@ -61,16 +64,17 @@ export class HomeComponent {
     $(".smooth").on("scroll", function () {
       var pageTop: any = $(document).scrollTop();
       var pageBottom = pageTop + $(window).height();
-      var tags = $("section");
+      const tags = $("section");
+      const select = '.main'
       for (var i = 0; i < tags.length; i++) {
         var tag = tags[i];
         if ($(tag).position().top < pageBottom) {
-          $(tag).children('.tag').addClass("visible");
+          $(tag).find(select).addClass("visible");
         } else {
-          $(tag).children('.tag').removeClass("visible");
+          $(tag).find(select).removeClass("visible");
         }
       }
     });
-
+    $('#home').find('.main').addClass("visible");
   }
 }

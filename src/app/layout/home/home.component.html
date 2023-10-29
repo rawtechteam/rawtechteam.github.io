@@ -1,41 +1,68 @@
 <div class="smooth">
     <section id="home" [lazyLoad]="image1">
-        <h2 class="tag">
-            <span class="title">
-                <span class="fname">{{fname}}</span>
-                <small>weds</small>
-                <span class="sname">{{sname}}</span></span>
-        </h2>
+        <div class="container main" style="height: 100vh;">
+            <div class="row justify-content-center justify-content-lg-end align-items-lg-center" style="height: 100%;">
+                <div class="col-12 col-md-6">
+                    <h1 class="tag display-1">
+                        <span class="title">
+                            <span class="fname">{{fname}} </span>
+                            <span class="display-4 mx-2 mx-md-4">weds </span>
+                            <span class="sname">{{sname}}</span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="about" [lazyLoad]="image2">
-        <h2 class="tag">
-            <span>
-                Join us as we embark on this beautiful journey of love, laughter,<br>
-                and a lifetime of shared dreams.<br>
-                Your presence will make our day even more special.
-            </span>
-        </h2>
+        <div class="container main" style="height: 100vh;">
+            <div class="row justify-content-center justify-content-lg-end align-items-lg-center" style="height: 100%;">
+                <div class="col-12 col-lg-7">
+                    <h1 class="tag display-1">
+                        <span>
+                            Join us as we embark on this beautiful journey of love, laughter,
+                            and a lifetime of shared dreams.
+                            Your presence will make our day even more special.
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="dates" [lazyLoad]="image3">
-        <h2 class="tag">
-            <span>on 07-12-2023 <br>
-                at 12.35 pm
-            </span>
-        </h2>
+        <div class="container main" style="height: 100vh;">
+            <div class="row justify-content-center justify-content-lg-end align-items-lg-center" style="height: 100%;">
+                <div class="col-9 col-xs-6 col-md-6 col-lg-5">
+                    <h1 class="tag display-1">
+                        <span>
+                            <p>on 07-12-2023</p>
+                            <p>at 12.35 pm</p>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="contact" [lazyLoad]="image4">
-        <h2 class="tag">
-            <span style="text-decoration: underline;">Venue</span><br>
-            <span>
-                Shree Krupa Banquets,<br>
-                Sector 6,Khanda Colony,<br>
-                Panvel - 410206
-            </span>
-        </h2>
-        <hr>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1886.1162114102162!2d73.112579!3d19.0094773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e84a0eb9b989%3A0x1d45820a84849bea!2sShree%20Krupa%20Banquets!5e0!3m2!1sen!2sin!4v1698054369901!5m2!1sen!2sin"
-            style="border:0;width: 90%;height: 60vh;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container-fluid main">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-5 mb-2 mb-md-0">
+                    <h1 class="tag display-4 box shadow centered-text">
+                        <span>
+                            <span style="text-decoration: underline;">Venue</span><br>
+                            Shree Krupa Banquets,<br>
+                            Sector 6,Khanda Colony,<br>
+                            Panvel - 410206
+                        </span>
+                    </h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1886.1162114102162!2d73.112579!3d19.0094773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e84a0eb9b989%3A0x1d45820a84849bea!2sShree%20Krupa%20Banquets!5e0!3m2!1sen!2sin!4v1698054369901!5m2!1sen!2sin"
+                        style="border:0;width: 100%;height: 60vh;" class="box shadow" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
