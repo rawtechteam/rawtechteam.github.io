@@ -4,6 +4,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from './layout/home/home.component';
   imports: [
     BrowserModule,
     LazyLoadImageModule,
+    NgxGoogleAnalyticsModule.forRoot('G-XTH7TN48XV'),
     AppRoutingModule
   ],
   providers: [Title],
