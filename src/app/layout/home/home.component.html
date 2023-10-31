@@ -43,7 +43,7 @@
             </div>
         </div>
     </section>
-    <section id="video">
+    <section id="video" *ngIf="dateCondition()">
         <span class="page-change page-up">
             <button type="button" class="page-icon" (click)="pageChange('up')"><i class="bi bi-caret-up"></i></button>
         </span>
