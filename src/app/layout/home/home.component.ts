@@ -15,8 +15,7 @@ export class HomeComponent {
   image4: any = './assets/page4.JPG'
   fname: any = 'Suyog'
   sname: any = 'Payal'
-  constructor(private title: Title, private meta: Meta, private route: ActivatedRoute) { }
-  ngOnInit() {
+  constructor(private title: Title, private meta: Meta, private route: ActivatedRoute) {
     this.title.setTitle('Suyog weds Payal')
     this.route.params.subscribe((val: any) => {
       switch (val.val) {
@@ -38,7 +37,6 @@ export class HomeComponent {
       this.meta.updateTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
       this.meta.updateTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
       this.meta.updateTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
-
     })
     this.meta.updateTag({ name: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
     this.meta.updateTag({ itemprop: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
@@ -50,6 +48,8 @@ export class HomeComponent {
     this.meta.updateTag({ name: 'twitter:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
     this.meta.updateTag({ property: 'twitter:image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
 
+  }
+  ngOnInit() {
     $('#home .tag').addClass('visible');
     $(".smooth").on("scroll", function () {
       var pageTop: any = $(document).scrollTop();
