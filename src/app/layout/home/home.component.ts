@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Observable, Subscription, interval, map, timer } from 'rxjs';
 declare var $: any;
 declare var bootstrap: any;
 @Component({
@@ -15,8 +16,20 @@ export class HomeComponent {
   image4: any = './assets/page4.JPG'
   fname: any = 'Suyog'
   sname: any = 'Payal'
+  private timer$: Observable<number>;
+  counter: string = '';
   constructor(private title: Title, private meta: Meta, private route: ActivatedRoute, private router: Router) {
     this.title.setTitle('Suyog weds Payal')
+
+    this.timer$ = timer(1000, 1000).pipe(
+      map(() => {
+        const now = new Date();
+        const targetDate = new Date('2023-12-07 12:35:00');
+        const remainingTime = targetDate.getTime() - now.getTime();
+        return remainingTime / 1000;
+      })
+    );
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
 
@@ -44,7 +57,19 @@ export class HomeComponent {
       }
     });
   }
+
   ngOnInit() {
+    this.timer$.subscribe(timeDifference => {
+      const remainingTimeInMs = timeDifference * 1000;
+
+      const days = Math.floor(remainingTimeInMs / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remainingTimeInMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((remainingTimeInMs % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((remainingTimeInMs % (1000 * 60)) / 1000);
+      const timeRemaining = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      this.counter = timeRemaining
+    });
+
     $('#home .tag').addClass('visible');
     $(".smooth").on("scroll", function () {
       var pageTop: any = $(document).scrollTop();
