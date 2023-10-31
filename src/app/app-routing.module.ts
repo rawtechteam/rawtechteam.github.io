@@ -8,6 +8,7 @@ const routes: Routes = [
     data: {
       metadata: {
         title: 'Suyog Weds Payal',
+        itemprop: 'Suyog Weds Payal',
         description: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.'
       }
     }
@@ -17,6 +18,7 @@ const routes: Routes = [
     data: {
       metadata: {
         title: 'Suyog Weds Payal',
+        itemprop: 'Suyog Weds Payal',
         description: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.'
       }
     }

@@ -33,21 +33,11 @@ export class HomeComponent {
           break;
       }
       this.title.setTitle(`${this.fname} weds ${this.sname}`)
-      this.meta.updateTag({ itemprop: "name", content: `${this.fname} weds ${this.sname}` })
-      this.meta.updateTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
-      this.meta.updateTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
-      this.meta.updateTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
+      this.meta.addTag({ itemprop: "name", content: `${this.fname} weds ${this.sname}` })
+      this.meta.addTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
+      this.meta.addTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
+      this.meta.addTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
     })
-    this.meta.updateTag({ name: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ itemprop: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ itemprop: 'image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
-    this.meta.updateTag({ property: 'og:type', content: 'website' })
-    this.meta.updateTag({ property: 'og:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ property: 'og:image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' })
-    this.meta.updateTag({ name: 'twitter:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ property: 'twitter:image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
-
   }
   ngOnInit() {
     $('#home .tag').addClass('visible');
