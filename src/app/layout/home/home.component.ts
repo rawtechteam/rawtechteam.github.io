@@ -18,19 +18,6 @@ export class HomeComponent {
   constructor(private title: Title, private meta: Meta, private route: ActivatedRoute) { }
   ngOnInit() {
     this.title.setTitle('Suyog weds Payal')
-    this.meta.updateTag({ name: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-
-    this.meta.updateTag({ itemprop: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ itemprop: 'image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
-
-    this.meta.updateTag({ property: 'og:type', content: 'website' })
-    this.meta.updateTag({ property: 'og:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ property: 'og:image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
-
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' })
-    this.meta.updateTag({ name: 'twitter:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
-    this.meta.updateTag({ property: 'twitter:image', content: 'https://rawtechteam.github.io/page1.be6839336052a63c.JPG' })
-
     this.route.params.subscribe((val: any) => {
       switch (val.val) {
         case 'bride':
@@ -47,13 +34,22 @@ export class HomeComponent {
           break;
       }
       this.title.setTitle(`${this.fname} weds ${this.sname}`)
-
-      this.meta.updateTag({ itemprop: 'name', content: `${this.fname} weds ${this.sname}` })
+      this.meta.updateTag({ itemprop: "name", content: `${this.fname} weds ${this.sname}` })
       this.meta.updateTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
       this.meta.updateTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
-
       this.meta.updateTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
+
     })
+    this.meta.updateTag({ name: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ itemprop: 'description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ itemprop: 'image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
+    this.meta.updateTag({ property: 'og:type', content: 'website' })
+    this.meta.updateTag({ property: 'og:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ property: 'og:image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' })
+    this.meta.updateTag({ name: 'twitter:description', content: 'Join us as we embark on this beautiful journey of love, laughter, and a lifetime of shared dreams.Your presence will make our day even more special.' })
+    this.meta.updateTag({ property: 'twitter:image', content: 'https://rawtechteam.github.io/assets/page1.JPG' })
+
     $('#home .tag').addClass('visible');
     $(".smooth").on("scroll", function () {
       var pageTop: any = $(document).scrollTop();
