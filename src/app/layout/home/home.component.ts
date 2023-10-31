@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 declare var $: any;
 declare var bootstrap: any;
 @Component({
@@ -15,29 +15,34 @@ export class HomeComponent {
   image4: any = './assets/page4.JPG'
   fname: any = 'Suyog'
   sname: any = 'Payal'
-  constructor(private title: Title, private meta: Meta, private route: ActivatedRoute) {
+  constructor(private title: Title, private meta: Meta, private route: ActivatedRoute, private router: Router) {
     this.title.setTitle('Suyog weds Payal')
-    this.route.params.subscribe((val: any) => {
-      switch (val.val) {
-        case 'bride':
-          this.fname = 'Payal'
-          this.sname = 'Suyog'
-          break;
-        case 'groom':
-          this.fname = 'Suyog'
-          this.sname = 'Payal'
-          break;
-        default:
-          this.fname = 'Suyog'
-          this.sname = 'Payal'
-          break;
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+
+        this.route.params.subscribe((val: any) => {
+          switch (val.val) {
+            case 'bride':
+              this.fname = 'Payal'
+              this.sname = 'Suyog'
+              break;
+            case 'groom':
+              this.fname = 'Suyog'
+              this.sname = 'Payal'
+              break;
+            default:
+              this.fname = 'Suyog'
+              this.sname = 'Payal'
+              break;
+          }
+          this.title.setTitle(`${this.fname} weds ${this.sname}`)
+          this.meta.addTag({ itemprop: "name", content: `${this.fname} weds ${this.sname}` })
+          this.meta.addTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
+          this.meta.addTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
+          this.meta.addTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
+        })
       }
-      this.title.setTitle(`${this.fname} weds ${this.sname}`)
-      this.meta.addTag({ itemprop: "name", content: `${this.fname} weds ${this.sname}` })
-      this.meta.addTag({ name: 'twitter:title', content: `${this.fname} weds ${this.sname}` })
-      this.meta.addTag({ property: 'og:title', content: `${this.fname} weds ${this.sname}` })
-      this.meta.addTag({ property: 'og:url', content: `https://rawtechteam.github.io/${val.val || ''}` })
-    })
+    });
   }
   ngOnInit() {
     $('#home .tag').addClass('visible');
