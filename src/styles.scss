@@ -109,7 +109,21 @@ body {
         flex-flow: column wrap;
         background-size: cover;
         scroll-snap-align: center;
+        &:nth-child(1) {
+            background-image: url('./assets/page1.JPG');
+        }
 
+        &:nth-child(2) {
+            background-image: url('./assets/page2.JPG');
+        }
+
+        &:nth-child(3) {
+            background-image: url('./assets/page3.JPG');
+        }
+
+        &:nth-child(5) {
+            background-image: url('./assets/page4.JPG');
+        }
         .main {
             padding-top: 15px;
             filter: blur(10px);
@@ -170,7 +184,7 @@ body {
             background-position: 31% 0% !important;
         }
 
-        &:nth-child(4) {
+        &:nth-child(5) {
             background-position: 46% 50% !important;
             background-size: cover !important;
         }
@@ -193,7 +207,7 @@ body {
             background-position: 0% 25% !important;
         }
 
-        &:nth-child(4) {
+        &:nth-child(5) {
             background-position: 0% 40% !important;
             background-size: cover !important;
 

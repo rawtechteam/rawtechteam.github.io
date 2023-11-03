@@ -10,10 +10,6 @@ declare var bootstrap: any;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  image1: any = './assets/page1.JPG'
-  image2: any = './assets/page2.JPG'
-  image3: any = './assets/page3.JPG'
-  image4: any = './assets/page4.JPG'
   fname: any = 'Suyog'
   sname: any = 'Payal'
   private timer$: Observable<number>;
